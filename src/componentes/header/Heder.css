@@ -1,20 +1,22 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 img {
     width: 50px;
     height: 50px;
-    
+
 }
 
 body {
-    font-family:"Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
     background-color: #F8F9FA;
     color: #131010;
     line-height: 1.6;
     padding: 20px;
+    text-decoration: none;
 }
 
 header {
@@ -22,10 +24,14 @@ header {
     top: 15px;
     left: 50%;
     transform: translateX(-50%);
-    width: auto;            /* El ancho se ajusta al contenido */
-    min-width: 400px;       /* Evita que sea demasiado pequeño en desktop */
-    max-width: 800px;       /* Bajamos de 1200px a 800px para que se vea "mediano" */
-    padding: 8px 20px;      /* Reducimos el grosor (vertical) y el aire (horizontal) */
+    width: auto;
+    /* El ancho se ajusta al contenido */
+    min-width: 400px;
+    /* Evita que sea demasiado pequeño en desktop */
+    max-width: 800px;
+    /* Bajamos de 1200px a 800px para que se vea "mediano" */
+    padding: 8px 20px;
+    /* Reducimos el grosor (vertical) y el aire (horizontal) */
     z-index: 1000;
     background: rgba(218, 175, 242, 0.2);
     backdrop-filter: blur(10px);
@@ -33,7 +39,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 50px;    /* Más redondeado tipo "píldora" para tamaños medianos */
+    border-radius: 50px;
+    /* Más redondeado tipo "píldora" para tamaños medianos */
     border: 1px solid rgba(167, 118, 255, 0.3);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -44,7 +51,8 @@ header.active {
     width: 100%;
     max-width: 100%;
     border-radius: 0;
-    background: rgba(218, 175, 242, 0.5); /* Se oscurece un poco para legibilidad */
+    background: rgba(218, 175, 242, 0.5);
+    /* Se oscurece un poco para legibilidad */
     padding: 5px 10%;
 }
 
@@ -55,7 +63,8 @@ nav a {
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 8px;
-    position: relative; /* Para el efecto de la línea debajo */
+    position: relative;
+    /* Para el efecto de la línea debajo */
     transition: all 0.3s ease;
 }
 
@@ -77,7 +86,8 @@ nav a:hover::after {
 }
 
 nav a:hover {
-    color: #6a1b9a; /* Cambia sutilmente el color del texto */
+    color: #6a1b9a;
+    /* Cambia sutilmente el color del texto */
     background: rgba(255, 255, 255, 0.3);
 }
 
@@ -88,13 +98,13 @@ nav a:hover {
     font-weight: 700;
     padding: 10px 20px;
     border-radius: 15px;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: inline-block;
 }
 
 .nav-btn:hover {
-    background: rgba(255, 255, 255, 0.5); 
-    transform: translateY(-3px) scale(1.05); 
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px) scale(1.05);
     box-shadow: 0 10px 20px rgba(167, 118, 255, 0.2);
     color: #a776ff;
 }
@@ -115,6 +125,13 @@ nav a:hover {
     color: white;
 }
 
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+}
+
 nav ul li {
     animation: fadeInDown 0.5s ease forwards;
 }
@@ -124,6 +141,7 @@ nav ul li {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
