@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Heder.css';
+import './Header.css';
 import miLogo from '../../imagenes/logo.jpeg';
 
 const Header = () => {
